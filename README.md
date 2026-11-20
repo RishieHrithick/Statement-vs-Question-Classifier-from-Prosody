@@ -19,7 +19,7 @@ Pitch is extracted with pYIN and expressed in semitones relative to the clip med
 | RF, final-pitch features only | XX% ± XX |
 
 ### Confusion matrix (Random Forest, cross-validated)
-![confusion matrix](confusion_matrix.png)
+![confusion matrix](confusion_matrix (1).png)
 
 | | Predicted statement | Predicted question |
 |---|---|---|
@@ -38,14 +38,3 @@ Questions end at a higher pitch level (`final_level_st`, median about +3 vs abou
 
 Speaking rate and articulation rate had the highest Random Forest importance, ahead of the pitch features. Clips were matched by word count, but duration can still differ between classes, and with only 56 clips these importances are noisy. The boxplots show the expected end-of-utterance pitch effect, but the rate features may be partly capturing dataset-specific differences.
 
-## Limitations
-- Very small dataset: only 28 questions passed the 4-15 word filter.
-- One speaker reading audiobooks, so the results do not generalize to other speakers, conversational speech or other languages.
-- Many English questions (especially wh-questions) do not rise in pitch, which caps accuracy for any pitch-based method.
-- Accuracy varies across folds at this sample size.
-
-## Run it
-Open `Project_B_Prosody_Classifier.ipynb` in Google Colab (CPU runtime) and run all cells (about 15 minutes, mostly dataset download and feature extraction).
-
-## Possible next steps
-More clips and a held-out test set, a yes/no vs wh-question breakdown, and extending the approach to Tamil/Hindi.
