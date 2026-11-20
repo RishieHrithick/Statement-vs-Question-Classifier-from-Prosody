@@ -19,7 +19,7 @@ Pitch is extracted with pYIN and expressed in semitones relative to the clip med
 | RF, final-pitch features only | XX% ± XX |
 
 ### Confusion matrix (Random Forest, cross-validated)
-![confusion matrix](confusion_matrix(1).png)
+![confusion matrix](confusion_matrix.png)
 
 | | Predicted statement | Predicted question |
 |---|---|---|
